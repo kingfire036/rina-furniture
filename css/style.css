@@ -1,0 +1,696 @@
+/* CSS Variables (Unchanged) */
+:root {
+    --primary-bg: #F5EFE6;
+    --secondary-bg: #FFFFFF;
+    --dark-text: #3A3845;
+    --accent-color: #D76F30;
+    --light-grey: #f8f9fa;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --navbar-height: 60px;
+}
+
+/* Global Styles (Unchanged) */
+body {
+    font-family: var(--font-primary);
+    color: var(--dark-text);
+    background-color: var(--primary-bg);
+    padding-top: var(--navbar-height);
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+}
+
+.section-title {
+    color: var(--dark-text);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #c25a1c;
+    border-color: #c25a1c;
+}
+
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Navigation Bar (Unchanged) */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-bg) !important;
+    height: var(--navbar-height);
+}
+
+.navbar-brand {
+    color: var(--accent-color) !important;
+    font-family: var(--font-secondary);
+}
+
+.nav-link {
+    color: var(--dark-text) !important;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Hero Section (Unchanged) */
+#hero {
+    min-height: calc(100vh - var(--navbar-height));
+    background-size: cover;
+    background-position: center;
+    color: var(--primary-bg);
+}
+
+.hero-tagline {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .hero-tagline {
+        font-size: 3.5rem;
+    }
+}
+
+.cta-button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Services Section (Unchanged) */
+#services {
+    background-color: var(--secondary-bg);
+}
+
+.service-card {
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    fill: var(--accent-color);
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: #555;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.service-card:hover .service-description {
+    opacity: 1;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+.service-turnkey:hover .service-description {
+    opacity: 1;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+/* Portfolio Gallery & Lightbox (Unchanged) */
+#portfolio {
+    background-color: var(--light-grey);
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.portfolio-item img {
+    transition: transform 0.4s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item a {
+    display: block;
+    position: relative;
+}
+
+.portfolio-item a::after {
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(215, 111, 48, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover a::after {
+    opacity: 1;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.lightbox:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90vh;
+    display: block;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+/* Why Choose Us Section (Unchanged) */
+#why-us {
+    background-color: var(--secondary-bg);
+}
+
+.why-us-card {
+    border: none;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.stat-number {
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.stat-unit {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 2px;
+    line-height: 1;
+    vertical-align: super;
+}
+
+/* Testimonials Section Styles REMOVED */
+/* No specific styles were present beyond Bootstrap defaults, so none removed */
+
+/* Contact Section - UPDATED Styles */
+#contact {
+    background-color: var(--primary-bg);
+    /* Keep original background */
+}
+
+/* Styles for Added Contact Info Row */
+/* .contact-info-row { */
+/* Add more styling if needed, like borders or backgrounds */
+/* } */
+
+.contact-info-item {
+    /* Styling for individual contact detail blocks */
+    padding: 15px 0;
+    /* Add some vertical padding */
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    /* Increase icon size */
+    color: var(--accent-color);
+    /* Use accent color for icons */
+}
+
+.contact-link {
+    color: var(--dark-text);
+    /* Standard text color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+    /* Accent color on hover */
+    text-decoration: underline;
+}
+
+.contact-info-item span {
+    margin-top: 5px;
+    /* Space between icon and text */
+    font-size: 1rem;
+}
+
+.form-heading {
+    color: var(--dark-text);
+    font-weight: 600;
+    /* Slightly bolder than normal */
+    margin-top: 30px;
+    /* Space above the form if info is present */
+}
+
+
+/* Form Styling (Mostly Unchanged, relies on Bootstrap) */
+#contact-form .form-control,
+#contact-form .form-select {
+    /* Include form-select */
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form .form-control:focus,
+#contact-form .form-select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(215, 111, 48, 0.25);
+}
+
+/* Validation Styles (Unchanged) */
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .form-select:invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid,
+.was-validated .form-select:valid,
+.form-select.is-valid {
+    border-color: #198754;
+}
+
+/* Footer (Unchanged) */
+footer {
+    background-color: var(--dark-text) !important;
+    color: var(--primary-bg);
+}
+
+/* Utility Classes (Unchanged) */
+.bg-light {
+    background-color: var(--light-grey) !important;
+}
+
+/* Responsive Adjustments (Minor changes might occur due to content changes) */
+@media (max-width: 767px) {
+    .hero-tagline {
+        font-size: 2rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-item a::after {
+        opacity: 0.3;
+        background-color: rgba(58, 56, 69, 0.5);
+        font-size: 2rem;
+    }
+
+    .portfolio-item:active a::after {
+        opacity: 1;
+        background-color: rgba(215, 111, 48, 0.7);
+    }
+
+    /* Adjust contact info layout if needed on smaller screens */
+    .contact-info-item {
+        padding: 10px 0;
+        /* Slightly less padding */
+    }
+
+    .contact-icon {
+        font-size: 2rem;
+        /* Slightly smaller icons */
+    }
+}
+
+
+
+
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    /* Change to preferred color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+
+@media (max-width: 767px) {
+    nav.navbar {
+        background-color: rgb(255, 255, 255) !important;
+        /* Gray background */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* Optional: soft shadow */
+        backdrop-filter: blur(10px);
+        /* Optional: blur effect */
+    }
+
+    .navbar-nav {
+        background-color: #d3d3d3;
+        /* Lighter gray for nav items */
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        border-bottom: 1px solid #bbb;
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+
+.navbar-brand.super-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(120deg, #FFD700, #b8860b, #fff8dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.navbar-brand.super-brand::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-20deg);
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+
+
+/* Container styling */
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* List styling */
+.ulbody1 ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.ulbody1 ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.ulbody1 ul li a:hover {
+    transform: scale(1.2);
+}
+
+/* Icon specific colors */
+.instagram {
+    color: #E4405F;
+}
+
+.whatsapp {
+    color: #25D366;
+}
+
+.mail {
+    color: #39d5dd;
+    transition: color 0.3s ease;
+}
+
+/* Optional dark mode support */
+body.dark .instagram {
+    color: #ff7aa2;
+}
+
+body.dark .whatsapp {
+    color: #57f7a1;
+}
+
+body.dark .mail {
+    color: #ff8a80;
+}
+
+
+
+
+.hero-tagline span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay each word */
+.hero-tagline span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-tagline span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.hero-tagline span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.hero-tagline span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: bgCarousel 40s infinite;
+    filter: none;
+    opacity: 1;
+    z-index: -2;
+}
+
+/* Optional dark overlay for contrast */
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* Keep text above background */
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Extended Carousel Animation */
+@keyframes bgCarousel {
+    0% {
+        background-image: url('https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_1280.jpg');
+    }
+
+    10% {
+        background-image: url('https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839183_1280.jpg');
+    }
+
+    20% {
+        background-image: url('https://cdn.pixabay.com/photo/2024/05/11/07/22/sofa-8754140_1280.jpg');
+    }
+
+    30% {
+        background-image: url('https://cdn.pixabay.com/photo/2020/01/23/02/33/kitchen-4786780_1280.jpg');
+    }
+
+    40% {
+        background-image: url('https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939_1280.jpg');
+    }
+
+    50% {
+        background-image: url('https://cdn.pixabay.com/photo/2021/02/13/21/47/interior-design-6012873_1280.jpg');
+    }
+
+    60% {
+        background-image: url('https://cdn.pixabay.com/photo/2020/05/19/11/12/ceiling-5190252_1280.jpg');
+    }
+
+    70% {
+        background-image: url('https://cdn.pixabay.com/photo/2023/04/09/12/57/master-bedroom-7911528_1280.jpg');
+    }
+
+    80% {
+        background-image: url('https://cdn.pixabay.com/photo/2023/04/09/00/48/master-bedroom-7910422_1280.jpg');
+    }
+
+    90% {
+        background-image: url('https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg');
+    }
+
+    100% {
+        background-image: url('https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685521_1280.jpg');
+    }
+}
