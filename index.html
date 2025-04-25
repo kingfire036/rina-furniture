@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="RINA FURNITURE - Transforming Spaces, Crafting Perfection. Specializing in custom furniture, modular kitchens, POP ceilings, painting, and turnkey projects. Contact Chandubhai Mistry at +91 8780151774.">
+        content="RINA FURNITURE - Transforming Spaces, Crafting Perfection. Specializing in custom furniture, modular kitchens, POP ceilings, painting, and turnkey projects. Contact Chandubhai Fataniya at +91 8780151774.">
     <meta name="keywords"
         content="furniture design, custom furniture, aluminium fabrication, modular kitchen, POP ceiling, gypsum ceiling, PVC furniture, wall painting, turnkey project, interior design, RINA FURNITURE, Chandubhai Mistry">
 
@@ -92,7 +92,7 @@
     <section id="hero" class="d-flex align-items-center justify-content-center text-center">
         <div class="container">
             <h1 class="hero-tagline fw-bold mb-4">
-                <span>Transform</span> <span>Spaces,</span> <span>Craft</span> <span>Perfection</span>
+                <span>Designing</span> <span>Dreams,</span> <span>Defining</span> <span>Comfort</span>
             </h1>
             <a href="#contact" class="btn btn-primary btn-lg cta-button">Get a Quote</a>
         </div>
@@ -279,7 +279,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="contact-info-item d-flex flex-column align-items-center">
                             <i class="bi bi-person-circle contact-icon mb-2"></i>
-                            <span class="fw-bold">Chandubhai Mistry</span>
+                            <span class="fw-bold">Chandubhai Fataniya</span>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
@@ -328,7 +328,6 @@
                                         Please enter a valid 10-digit mobile number.
                                     </div>
                                 </div>
-                                <!-- Type of Work Dropdown - ADDED/REPLACED SUBJECT -->
                                 <div class="col-12">
                                     <label for="work-type" class="form-label">Type of Work Interested In</label>
                                     <select class="form-select" id="work-type" required>
@@ -347,7 +346,6 @@
                                         Please select the type of work you are interested in.
                                     </div>
                                 </div>
-                                <!-- Message -->
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message / Requirements</label>
                                     <textarea class="form-control" id="message" rows="5" required></textarea>
@@ -355,7 +353,6 @@
                                         Please enter your message or requirements.
                                     </div>
                                 </div>
-                                <!-- Submit Button -->
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary btn-lg">Send Inquiry</button>
                                 </div>
@@ -367,7 +364,6 @@
         </section>
     </main>
 
-    <!-- Footer (Unchanged) -->
     <section id="about">
         <footer class="bg-dark text-white text-center py-3">
             <div class="container1">
@@ -382,19 +378,34 @@
                 </div>
             </div>
 
-            <p>© 2025 RINA FURNITURE. All Rights Reserved. Developed by <a href="https://github.com/krupal-036"
-                    class="">krupal-036</a> </p>
+            <p>© 2025 RINA FURNITURE. Developed by <a href="https://github.com/krupal-036"
+                    style="color: #00ffe0; font-weight: 500; font-size: 16px; text-decoration: none; position: relative; display: inline-block; transition: color 0.3s;">
+                    <span style="margin-right: 6px;">👋</span>
+                    krupal-036
+                    <span
+                        style="content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background-color: #00ffe0; transition: width 0.3s;"></span>
+                </a>
+
+                <script>
+                    const link = document.querySelector('a[href="https://github.com/krupal-036"]');
+                    link.addEventListener('mouseover', () => {
+                        link.style.color = '#ffffff';
+                        link.children[1].style.width = '100%';
+                    });
+                    link.addEventListener('mouseout', () => {
+                        link.style.color = '#00ffe0';
+                        link.children[1].style.width = '0';
+                    });
+                </script>
+            </p>
             </div>
     </section>
     </footer>
 
-    <!-- Bootstrap JS Bundle CDN (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
 </body>
-
 </html>
