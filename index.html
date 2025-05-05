@@ -4,84 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="RINA FURNITURE - Transforming Spaces, Crafting Perfection. Specializing in custom furniture, modular kitchens, POP ceilings, painting, and turnkey projects. Contact Chandubhai Fataniya at +91 8780151774.">
-    <meta name="keywords"
-        content="furniture design, custom furniture, aluminium fabrication, modular kitchen, POP ceiling, gypsum ceiling, PVC furniture, wall painting, turnkey project, interior design, RINA FURNITURE, Chandubhai Mistry">
-
-    <title>Rina Furniture - Furniture that Speaks Crafting Perfection</title>
+    <meta name="description" content="RINA FURNITURE - Transforming Spaces, Crafting Perfection. Specializing in custom furniture, modular kitchens, POP ceilings, painting, and turnkey projects. Contact Chandubhai Fataniya at +91 8780151774.">
+    <meta name="keywords" content="furniture design, custom furniture, aluminium fabrication, modular kitchen, POP ceiling, gypsum ceiling, PVC furniture, wall painting, turnkey project, interior design, RINA FURNITURE, Chandubhai Mistry, Ahmedabad">
+    <title>Rina Furniture - Designing Dreams, Defining Comfort</title>
 
     <link rel="icon" href="https://cdn-icons-png.freepik.com/512/6412/6412891.png" type="image/x-icon">
 
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Preload Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Playfair+Display:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    </noscript>
 
-    <!-- Flaticon -->
-    <link href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Preload CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <link rel="stylesheet" href="style.css">
     </noscript>
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="css/style.css">
-    </noscript>
+
+    <!-- Preload JS -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" as="script">
-    <link rel="preload" href="js/script.js" as="script">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Playfair+Display:wght@600&display=swap"
-        rel="stylesheet">
-
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.js" as="script">
+    <link rel="preload" href="script.js" as="script">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="main-navbar">
         <div class="container">
             <a class="navbar-brand fw-bold super-brand" href="#hero">Rina Furniture</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#hero">
-                            <i class="fi fi-rr-home me-1"></i> Home
+                            <i class="fas fa-house me-1"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">
-                            <i class="fi fi-rr-settings me-1"></i> Services
+                            <i class="fas fa-gear me-1"></i> Services
                         </a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <!-- Portfolio Link - Removed for now, uncomment if section is added back
+                    <li class="nav-item">
                         <a class="nav-link" href="#portfolio">
-                            <i class="fi fi-rr-briefcase me-1"></i> Portfolio
+                            <i class="fas fa-briefcase me-1"></i> Portfolio
                         </a>
                     </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#why-us">
-                            <i class="fi fi-rr-bulb me-1"></i> Why Us
+                            <i class="fas fa-star me-1"></i> Why Us
+                            
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#about-us">
+                            <i class="fas fa-id-card me-1"></i> About
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">
-                            <i class="fi fi-rr-envelope me-1"></i> Contact
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                            <i class="fi fi-rr-user me-1"></i> About
+                            <i class="fas fa-message me-1"></i> Contact
                         </a>
                     </li>
                 </ul>
@@ -94,175 +96,125 @@
             <h1 class="hero-tagline fw-bold mb-4">
                 <span>Designing</span> <span>Dreams,</span> <span>Defining</span> <span>Comfort</span>
             </h1>
-            <a href="#contact" class="btn btn-primary btn-lg cta-button">Get a Quote</a>
+            <a href="#contact" class="btn btn-primary btn-lg cta-button" data-aos="fade-up" data-aos-delay="1200">Get a Quote</a>
         </div>
     </section>
 
-
     <main>
-        <!-- Services Section (Unchanged) -->
         <section id="services" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 section-title">Our Expertise</h2>
+                <h2 class="text-center mb-5 section-title" data-aos="fade-up">Our Expertise</h2>
                 <div class="row g-4 text-center">
-                    <div class="col-md-12 col-lg-12">
-                        <div class="service-card p-4"><img
-                                src="https://cdn-icons-png.freepik.com/512/14454/14454122.png?ga=GA1.1.769564338.1742319222"
-                                alt="Custom Furniture Icon" class="service-icon mb-3">
+                    <!-- Service Items with AOS -->
+                    <div class="col-md-12 col-lg-12" data-aos="fade-up">
+                        <div class="service-card p-4">
+                            <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/14454/14454122.png?ga=GA1.1.769564338.1742319222" alt="Custom Furniture Icon" class="service-icon mb-3">
                             <h5 class="mb-2">Custom Furniture Work</h5>
-                            <p class="service-description">Bespoke furniture solutions tailored to your style and space
-                                requirements.</p>
+                            <p class="service-description">Bespoke furniture solutions tailored to your style and space requirements.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card p-4"><img
-                                src="https://indianextrusions.com/image_products/grunge_window_png_file___use_freely_by_theartist100-d6jpqi7-500x500.png"
-                                alt="Aluminium Fabrication Icon" class="service-icon mb-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card p-4">
+                            <img loading="lazy" src="https://indianextrusions.com/image_products/grunge_window_png_file___use_freely_by_theartist100-d6jpqi7-500x500.png" alt="Aluminium Fabrication Icon" class="service-icon mb-3">
                             <h5 class="mb-2">Aluminium Section</h5>
-                            <p class="service-description">Durable and modern aluminium windows, doors, and partitions.
-                            </p>
+                            <p class="service-description">Durable and modern aluminium windows, doors, and partitions.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card p-4"><img
-                                src="https://cdn-icons-png.freepik.com/512/2851/2851928.png?ga=GA1.1.769564338.1742319222"
-                                alt="Modular Kitchen Icon" class="service-icon mb-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card p-4">
+                             <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/2851/2851928.png?ga=GA1.1.769564338.1742319222" alt="Modular Kitchen Icon" class="service-icon mb-3">
                             <h5 class="mb-2">Modular Kitchen</h5>
-                            <p class="service-description">Efficient and stylish modular kitchens designed for
-                                functionality.</p>
+                            <p class="service-description">Efficient and stylish modular kitchens designed for functionality.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card p-4"><img
-                                src="https://cdn-icons-png.freepik.com/512/16132/16132214.png?ga=GA1.1.769564338.1742319222"
-                                alt="POP Ceiling Icon" class="service-icon mb-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card p-4">
+                            <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/16132/16132214.png?ga=GA1.1.769564338.1742319222" alt="POP Ceiling Icon" class="service-icon mb-3">
                             <h5 class="mb-2">POP/Gypsum Ceiling</h5>
-                            <p class="service-description">Creative and elegant false ceiling designs for enhanced
-                                aesthetics.</p>
+                            <p class="service-description">Creative and elegant false ceiling designs for enhanced aesthetics.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card p-4"><img
-                                src="https://cdn-icons-png.freepik.com/512/3108/3108795.png?ga=GA1.1.769564338.1742319222"
-                                alt="PVC Furniture Icon" class="service-icon mb-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                         <div class="service-card p-4">
+                            <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/3108/3108795.png?ga=GA1.1.769564338.1742319222" alt="PVC Furniture Icon" class="service-icon mb-3">
                             <h5 class="mb-2">PVC Furniture Work</h5>
-                            <p class="service-description">Water-resistant and low-maintenance PVC furniture solutions.
-                            </p>
+                            <p class="service-description">Water-resistant and low-maintenance PVC furniture solutions.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card p-4"><img
-                                src="https://cdn-icons-png.freepik.com/512/10021/10021552.png?ga=GA1.1.769564338.1742319222"
-                                alt="Wall Painting Icon" class="service-icon mb-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card p-4">
+                           <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/10021/10021552.png?ga=GA1.1.769564338.1742319222" alt="Wall Painting Icon" class="service-icon mb-3">
                             <h5 class="mb-2">Precision Wall Painting</h5>
-                            <p class="service-description">Professional interior and exterior painting services with
-                                flawless finishes.</p>
+                            <p class="service-description">Professional interior and exterior painting services with flawless finishes.</p>
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card p-4"><img
-                                src="https://cdn-icons-png.freepik.com/512/9760/9760176.png?ga=GA1.1.769564338.1742319222"
-                                alt="Wall Painting Icon" class="service-icon mb-3">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                         <div class="service-card p-4">
+                           <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/9760/9760176.png?ga=GA1.1.769564338.1742319222" alt="Electrical Work Icon" class="service-icon mb-3">
                             <h5 class="mb-2">Electrical Work</h5>
-                            <p class="service-description">Safe. Smart. Seamless – Expert Electrical Solutions You Can
-                                Trust.</p>
+                            <p class="service-description">Safe, smart, seamless – expert electrical solutions you can trust.</p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-12">
-                        <div class="service-card p-4 mt-4 service-turnkey"><img
-                                src="https://cdn-icons-png.freepik.com/512/942/942165.png?ga=GA1.1.769564338.1742319222"
-                                alt="Turnkey Project Icon" class="service-icon mb-3">
+                     <div class="col-md-12 col-lg-12 mt-4" data-aos="fade-up">
+                        <div class="service-card p-4 service-turnkey">
+                           <img loading="lazy" src="https://cdn-icons-png.freepik.com/512/942/942165.png?ga=GA1.1.769564338.1742319222" alt="Turnkey Project Icon" class="service-icon mb-3">
                             <h5 class="mb-2">Full Turnkey Project Execution</h5>
-                            <p class="service-description">Comprehensive project management from concept to completion
-                                for hassle-free interiors.</p>
+                            <p class="service-description">Comprehensive project management from concept to completion for hassle-free interiors.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section id="portfolio" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5 section-title">Our Work</h2>
-                <div class="row g-4 portfolio-gallery">
-                    <div class="col-sm-6 col-lg-4 portfolio-item" id="item1"><a href="#lightbox"
-                            data-image="https://img.freepik.com/free-photo/modern-kitchen-interior-white-colors_181624-58451.jpg"><img
-                                src="https://img.freepik.com/free-photo/modern-kitchen-interior-white-colors_181624-58451.jpg"
-                                alt="Modern Modular Kitchen" class="img-fluid"></a></div>
-                    <div class="col-sm-6 col-lg-4 portfolio-item"><a href="#lightbox"
-                            data-image="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-bookshelf_105762-2182.jpg"><img
-                                src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-bookshelf_105762-2182.jpg"
-                                alt="Custom Living Room Furniture" class="img-fluid"></a></div>
-                    <div class="col-sm-6 col-lg-4 portfolio-item"><a href="#lightbox"
-                            data-image="assets/images/portfolio/ceiling-1.webp"><img
-                                src="assets/images/portfolio/ceiling-1.webp" alt="POP Ceiling Design"
-                                class="img-fluid"></a></div>
-                    <div class="col-sm-6 col-lg-4 portfolio-item"><a href="#lightbox"
-                            data-image="assets/images/portfolio/custom-wardrobe.webp"><img
-                                src="assets/images/portfolio/custom-wardrobe.webp" alt="Custom Wardrobe"
-                                class="img-fluid"></a></div>
-                    <div class="col-sm-6 col-lg-4 portfolio-item"><a href="#lightbox"
-                            data-image="assets/images/portfolio/office-space.webp"><img
-                                src="assets/images/portfolio/office-space.webp" alt="Office Interior"
-                                class="img-fluid"></a></div>
-                    <div class="col-sm-6 col-lg-4 portfolio-item"><a href="#lightbox"
-                            data-image="assets/images/portfolio/painting-detail.webp"><img
-                                src="assets/images/portfolio/painting-detail.webp" alt="Wall Painting Detail"
-                                class="img-fluid"></a></div>
-                </div>
-            </div>
-        </section>
- 
-        
-
+        <!-- Portfolio Section - Removed for now. Add HTML structure back here if needed -->
+        <!-- Lightbox Structure (Keep if Portfolio might be added back) -->
+        <!--
         <div class="lightbox" id="lightbox">
-            <a href="#item1" class="lightbox-close">×</a>
+            <a href="#" class="lightbox-close" aria-label="Close lightbox">×</a>
             <img src="" alt="Enlarged Portfolio Image" class="lightbox-content">
-        </div> -->
+        </div>
+        -->
 
-
-
-
-
-        <!-- Why Choose Us Section (Unchanged) -->
         <section id="why-us" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 section-title">Why Choose RINA FURNITURE?</h2>
+                <h2 class="text-center mb-5 section-title" data-aos="fade-up">Why Choose RINA FURNITURE?</h2>
                 <div class="row g-4 text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-up">
                         <div class="card why-us-card h-100">
-                            <div class="card-body">
-                                <div class="stat-number display-4 fw-bold" data-target="21">0</div>
-                                <p class="stat-unit">+</p>
+                            <div class="card-body d-flex flex-column">
+                                <div>
+                                    <span class="stat-number display-4 fw-bold" data-target="21">0</span><span class="stat-unit">+</span>
+                                </div>
                                 <h5 class="card-title mt-2">Years of Experience</h5>
-                                <p class="card-text">Proven expertise delivering quality projects consistently.</p>
+                                <p class="card-text mt-auto">Proven expertise delivering quality projects consistently.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
                         <div class="card why-us-card h-100">
-                            <div class="card-body">
-                                <div class="stat-number display-4 fw-bold" data-target="350">0</div>
-                                <p class="stat-unit">+</p>
+                             <div class="card-body d-flex flex-column">
+                                <div>
+                                    <span class="stat-number display-4 fw-bold" data-target="350">0</span><span class="stat-unit">+</span>
+                                </div>
                                 <h5 class="card-title mt-2">Projects Completed</h5>
-                                <p class="card-text">Successfully transforming spaces for numerous satisfied clients.
-                                </p>
+                                <p class="card-text mt-auto">Successfully transforming spaces for numerous satisfied clients.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="card why-us-card h-100">
-                            <div class="card-body">
-                                <div class="stat-number display-4 fw-bold" data-target="100">0</div>
-                                <p class="stat-unit">%</p>
+                            <div class="card-body d-flex flex-column">
+                                <div>
+                                    <span class="stat-number display-4 fw-bold" data-target="100">0</span><span class="stat-unit">%</span>
+                                </div>
                                 <h5 class="card-title mt-2">Client Satisfaction</h5>
-                                <p class="card-text">Dedicated to craftsmanship and exceeding client expectations.</p>
+                                <p class="card-text mt-auto">Dedicated to craftsmanship and exceeding client expectations.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-5">
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <!-- NOTE: Ensure the PDF file exists at this path -->
                     <a href="pdfs/rina-furniture-catalog.pdf" class="btn btn-outline-primary mt-3" download>
                         <i class="bi bi-download me-2"></i> Download Catalog (PDF)
                     </a>
@@ -270,142 +222,133 @@
             </div>
         </section>
 
+        <!-- About Us Section - ADD CONTENT HERE -->
+        <section id="about-us" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 section-title" data-aos="fade-up">About RINA FURNITURE</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="https://via.placeholder.com/500x350/F5EFE6/3A3845?text=Rina+Furniture+Workshop" alt="About Rina Furniture" class="img-fluid rounded shadow-sm mb-4 mb-lg-0" loading="lazy">
+                        <!-- Replace with an actual relevant image -->
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <h3 class="mb-3">20+ Years of Crafting Excellence</h3>
+                        <p>Founded by Chandubhai Fataniya (Mistry), RINA FURNITURE has been transforming residential and commercial spaces across Ahmedabad for over two decades. Our passion lies in creating functional, beautiful, and durable interiors tailored to each client's unique vision.</p>
+                        <p>We believe in a collaborative approach, working closely with you from the initial concept to the final installation. Our expertise spans custom furniture, modular kitchens, innovative ceiling designs, precision painting, and complete turnkey solutions.</p>
+                        <p>At RINA FURNITURE, quality craftsmanship, attention to detail, and client satisfaction are the cornerstones of our business. Let us help you design your dream space.</p>
+                        <!-- Add more relevant details: team, philosophy, specific expertise etc. -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 section-title">Contact Us</h2>
+                <h2 class="text-center mb-5 section-title" data-aos="fade-up">Get In Touch</h2>
 
-                <!-- Contact Information Row - ADDED -->
-                <div class="row text-center contact-info-row mb-5 g-4">
-                    <div class="col-md-6 col-lg-3">
+                <!-- Contact Information Row -->
+                <div class="row text-center contact-info-row mb-5 g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up">
                         <div class="contact-info-item d-flex flex-column align-items-center">
                             <i class="bi bi-person-circle contact-icon mb-2"></i>
                             <span class="fw-bold">Chandubhai Fataniya</span>
+                            <span class="text-muted">(Owner & Lead Craftsman)</span>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="contact-info-item d-flex flex-column align-items-center">
                             <i class="bi bi-telephone-fill contact-icon mb-2"></i>
-                            <a href="tel:+91 8780151774" class="contact-link">+91 8780151774</a>
+                            <a href="tel:+918780151774" class="contact-link stretched-link">+91 8780151774</a>
+                            <span class="text-muted">Tap to Call</span>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                         <div class="contact-info-item d-flex flex-column align-items-center">
-                            <i class="bi bi-envelope-fill contact-icon mb-2"></i>
-                            <a href="mailto:rina-furniture@outlook.com"
-                                class="contact-link">rina-furniture@outlook.com</a>
+                           <i class="bi bi-envelope-fill contact-icon mb-2"></i>
+                            <a href="mailto:rina-furniture@outlook.com" class="contact-link stretched-link">rina-furniture@outlook.com</a>
+                             <span class="text-muted">Tap to Email</span>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                         <div class="contact-info-item d-flex flex-column align-items-center">
                             <i class="bi bi-geo-alt-fill contact-icon mb-2"></i>
-                            <span>Ahmedabad IN</span>
-                            <!-- Add your actual address -->
+                            <span>Based in Ahmedabad, IN</span>
+                             <span class="text-muted">Serving Ahmedabad & Surrounds</span>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="text-center mb-4 form-heading">Send an Inquiry</h3>
-                <!-- Inquiry Form - UPDATED -->
+                <h3 class="text-center mb-4 form-heading" data-aos="fade-up">Send an Inquiry</h3>
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                        <!-- NOTE: This form uses mailto:, which is unreliable. See script.js notes -->
                         <form id="contact-form" class="needs-validation" novalidate>
                             <div class="row g-3">
-                                <!-- Name -->
-                                <div class="col-12">
-                                    <label for="name" class="form-label">Name</label>
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="name" required>
-                                    <div class="invalid-feedback">
-                                        Please enter your name.
-                                    </div>
+                                    <div class="invalid-feedback">Please enter your name.</div>
                                 </div>
-                                <!-- Mobile Number - ADDED -->
-                                <div class="col-12">
-                                    <label for="mobile" class="form-label">Mobile Number</label>
-                                    <input type="tel" class="form-control" id="mobile" required pattern="[0-9]{10}"
-                                        placeholder="Enter 10 digit number">
-                                    <!-- Simple pattern for 10 digits, adjust if needed -->
-                                    <div class="invalid-feedback">
-                                        Please enter a valid 10-digit mobile number.
-                                    </div>
+                                <div class="col-md-6">
+                                    <label for="mobile" class="form-label">Mobile Number <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="mobile" required pattern="[0-9]{10}" placeholder="10 digit number">
+                                    <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
                                 </div>
                                 <div class="col-12">
-                                    <label for="work-type" class="form-label">Type of Work Interested In</label>
+                                    <label for="work-type" class="form-label">Service Interested In <span class="text-danger">*</span></label>
                                     <select class="form-select" id="work-type" required>
                                         <option selected disabled value="">Choose...</option>
-                                        <option value="Custom Furniture">Custom Furniture work</option>
-                                        <option value="Aluminium Fabrication">Aluminium Section</option>
-                                        <option value="Modular Kitchen">Modular Kitchen Installation</option>
+                                        <option value="Custom Furniture">Custom Furniture</option>
+                                        <option value="Aluminium Section">Aluminium Section</option>
+                                        <option value="Modular Kitchen">Modular Kitchen</option>
                                         <option value="POP/Gypsum Ceiling">POP/Gypsum Ceiling</option>
                                         <option value="PVC Furniture">PVC Furniture</option>
-                                        <option value="Electrical Work">Electrical Work</option>
-                                        <option value="Wall Painting">Precision Wall Painting</option>
+                                         <option value="Electrical Work">Electrical Work</option>
+                                        <option value="Wall Painting">Wall Painting</option>
                                         <option value="Turnkey Project">Full Turnkey Project</option>
-                                        <option value="Other">Other Inquiry</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Other">Other</option>
                                     </select>
-                                    <div class="invalid-feedback">
-                                        Please select the type of work you are interested in.
-                                    </div>
+                                    <div class="invalid-feedback">Please select a service.</div>
                                 </div>
                                 <div class="col-12">
-                                    <label for="message" class="form-label">Message / Requirements</label>
-                                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                                    <div class="invalid-feedback">
-                                        Please enter your message or requirements.
-                                    </div>
+                                    <label for="message" class="form-label">Message / Requirements <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="message" rows="5" required placeholder="Please describe your project or question..."></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
                                 </div>
                                 <div class="col-12 text-center">
+                                     <div id="form-message" class="mb-3"></div> <!-- For success/error messages -->
                                     <button type="submit" class="btn btn-primary btn-lg">Send Inquiry</button>
                                 </div>
                             </div>
                         </form>
+                        <p class="text-center text-muted mt-3"><small>Fields marked with <span class="text-danger">*</span> are required.</small></p>
+                         <div class="alert alert-warning mt-4" role="alert">
+                           <i class="bi bi-exclamation-triangle-fill me-2"></i> <strong>Note:</strong> Clicking "Send Inquiry" will attempt to open your default email client with the details pre-filled. Please ensure you complete and send the email from your client. For guaranteed delivery, consider calling us directly.
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <section id="about">
-        <footer class="bg-dark text-white text-center py-3">
-            <div class="container1">
-                <div class="ulbody1">
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
-                        <li><a href="https://wa.me/918780151774
-                            "><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
-                        <li><a href="mailto:rina-furniture@outlook.com"><i class="fa-solid fa-envelope mail"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <footer class="site-footer text-white text-center py-4">
+        <div class="container">
+             <div class="social-links mb-3">
+                 <a href="#" aria-label="Visit our Instagram" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                 <a href="https://wa.me/918780151774" aria-label="Chat on WhatsApp" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                 <a href="mailto:rina-furniture@outlook.com" aria-label="Send us an Email" class="social-icon"><i class="fas fa-envelope"></i></a>
+             </div>
 
-            <p>© 2025 RINA FURNITURE. Developed by <a href="https://github.com/krupal-036"
-                    style="color: #00ffe0; font-weight: 500; font-size: 16px; text-decoration: none; position: relative; display: inline-block; transition: color 0.3s;">
-                    <span style="margin-right: 6px;">👋</span>
-                    krupal-036
-                    <span
-                        style="content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background-color: #00ffe0; transition: width 0.3s;"></span>
-                </a>
-
-                <script>
-                    const link = document.querySelector('a[href="https://github.com/krupal-036"]');
-                    link.addEventListener('mouseover', () => {
-                        link.style.color = '#ffffff';
-                        link.children[1].style.width = '100%';
-                    });
-                    link.addEventListener('mouseout', () => {
-                        link.style.color = '#00ffe0';
-                        link.children[1].style.width = '0';
-                    });
-                </script>
-            </p>
-            </div>
-    </section>
+            <p class="mb-0">© <span id="current-year"></span> RINA FURNITURE. All Rights Reserved.</p>
+             <p class="developer-credit mb-0">Developed by <a href="https://github.com/krupal-036" target="_blank" rel="noopener noreferrer">krupal-036</a></p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Use defer to load script after HTML parsing -->
+    <script src="script.js" defer></script>
 </body>
 </html>
