@@ -5,14 +5,18 @@
     --dark-text: #3A3845;
     --accent-color: #D76F30;
     --light-grey: #f8f9fa;
-    --dark-grey: #6c757d; /* Added for subtle text */
+    --dark-grey: #6c757d;
+    /* Added for subtle text */
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
     --font-brand: 'Playfair Display', serif;
-    --navbar-height: 60px; /* Adjust if needed */
+    --navbar-height: 60px;
+    /* Adjust if needed */
     --transition-speed: 0.3s;
-    --bs-primary-rgb: 215, 111, 48; /* For Bootstrap component overrides */
-    --bs-link-hover-color-rgb: var(--bs-primary-rgb); /* Make links hover accent */
+    --bs-primary-rgb: 215, 111, 48;
+    /* For Bootstrap component overrides */
+    --bs-link-hover-color-rgb: var(--bs-primary-rgb);
+    /* Make links hover accent */
 }
 
 /* Global Styles */
@@ -22,10 +26,16 @@ body {
     background-color: var(--primary-bg);
     padding-top: var(--navbar-height);
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Prevent horizontal scroll caused by AOS */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll caused by AOS */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--dark-text);
@@ -40,7 +50,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Styling */
 section {
-    overflow: hidden; /* Contain AOS animations */
+    overflow: hidden;
+    /* Contain AOS animations */
 }
 
 .section-title {
@@ -67,9 +78,10 @@ section {
     font-family: var(--font-secondary);
     font-weight: 500;
     padding: 10px 25px;
-    border-radius: 50px; /* Rounded buttons */
+    border-radius: 50px;
+    /* Rounded buttons */
     transition: all var(--transition-speed) ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
@@ -84,7 +96,7 @@ section {
     border-color: #c25a1c;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-outline-primary {
@@ -97,7 +109,7 @@ section {
     background-color: var(--accent-color);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-lg {
@@ -115,17 +127,20 @@ section {
 
 .navbar-brand {
     color: var(--accent-color) !important;
-    font-family: var(--font-brand); /* Use Playfair Display */
-    font-size: 1.6rem; /* Slightly larger */
+    font-family: var(--font-brand);
+    /* Use Playfair Display */
+    font-size: 1.6rem;
+    /* Slightly larger */
     font-weight: 600;
 }
 
 .navbar-brand.super-brand {
     /* Keep existing gradient effect if desired */
-     font-family: var(--font-brand);
+    font-family: var(--font-brand);
     font-size: 1.5rem;
     font-weight: 600;
-    background: linear-gradient(120deg, #D76F30, #c25a1c, #eda474); /* Adjusted Gradient */
+    background: linear-gradient(120deg, #D76F30, #c25a1c, #eda474);
+    /* Adjusted Gradient */
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -133,7 +148,8 @@ section {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    letter-spacing: 1px; /* Reduced spacing */
+    letter-spacing: 1px;
+    /* Reduced spacing */
 }
 
 /* Keep shine effect if liked */
@@ -146,22 +162,34 @@ section {
     height: 100%;
     background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5), transparent);
     transform: skewX(-20deg);
-    animation: shine 2.5s infinite linear; /* Adjusted timing */
+    animation: shine 2.5s infinite linear;
+    /* Adjusted timing */
 }
 
 @keyframes shine {
-    0% { left: -75%; }
-    50% { left: 125%; }
-    100% { left: 125%; }
+    0% {
+        left: -75%;
+    }
+
+    50% {
+        left: 125%;
+    }
+
+    100% {
+        left: 125%;
+    }
 }
 
 .nav-link {
     color: var(--dark-text) !important;
-    margin: 0 8px; /* Increased spacing slightly */
+    margin: 0 8px;
+    /* Increased spacing slightly */
     transition: color var(--transition-speed) ease;
     position: relative;
-    padding-bottom: 8px; /* Space for underline */
-    font-weight: 500; /* Slightly bolder */
+    padding-bottom: 8px;
+    /* Space for underline */
+    font-weight: 500;
+    /* Slightly bolder */
 }
 
 .nav-link::after {
@@ -170,7 +198,8 @@ section {
     width: 0%;
     height: 2px;
     bottom: 0;
-    left: 50%; /* Start underline from center */
+    left: 50%;
+    /* Start underline from center */
     transform: translateX(-50%);
     background-color: var(--accent-color);
     transition: width var(--transition-speed) ease;
@@ -183,25 +212,30 @@ section {
 
 .nav-link:hover::after,
 .nav-link.active::after {
-    width: 70%; /* Underline width on hover/active */
+    width: 70%;
+    /* Underline width on hover/active */
 }
 
 .navbar-toggler {
     border: none;
 }
+
 .navbar-toggler:focus {
     box-shadow: none;
-    outline: 2px solid var(--accent-color); /* Accessibility */
+    outline: 2px solid var(--accent-color);
+    /* Accessibility */
 }
 
 /* Hero Section */
 #hero {
     min-height: calc(100vh - var(--navbar-height));
-    color: var(--primary-bg); /* Light text on dark bg */
+    color: var(--primary-bg);
+    /* Light text on dark bg */
     position: relative;
     overflow: hidden;
     z-index: 1;
-    display: flex; /* Ensure flex alignment works */
+    display: flex;
+    /* Ensure flex alignment works */
     align-items: center;
     justify-content: center;
 }
@@ -215,11 +249,14 @@ section {
     height: 100%;
     background-size: cover;
     background-position: center;
-    animation: bgCarousel 40s infinite linear; /* Smoother linear animation */
-    filter: none; /* Or add blur/brightness: filter: brightness(0.7); */
+    animation: bgCarousel 40s infinite linear;
+    /* Smoother linear animation */
+    filter: none;
+    /* Or add blur/brightness: filter: brightness(0.7); */
     opacity: 1;
     z-index: -2;
-    will-change: background-image; /* Perf hint */
+    will-change: background-image;
+    /* Perf hint */
 }
 
 #hero::after {
@@ -229,7 +266,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(1, 1, 1,0.6); /* Darker overlay for better contrast */
+    background: rgba(1, 1, 1, 0.6);
+    /* Darker overlay for better contrast */
     z-index: -1;
 }
 
@@ -250,7 +288,8 @@ section {
     opacity: 0;
     transform: translateY(25px);
     animation: fadeInUp 0.6s ease forwards;
-    padding: 0 3px; /* Small space between words */
+    padding: 0 3px;
+    /* Small space between words */
 }
 
 @keyframes fadeInUp {
@@ -261,24 +300,67 @@ section {
 }
 
 /* Stagger animation */
-.hero-tagline span:nth-child(1) { animation-delay: 0s; }
-.hero-tagline span:nth-child(2) { animation-delay: 0.2s; }
-.hero-tagline span:nth-child(3) { animation-delay: 0.4s; }
-.hero-tagline span:nth-child(4) { animation-delay: 0.6s; }
+.hero-tagline span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-tagline span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hero-tagline span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.hero-tagline span:nth-child(4) {
+    animation-delay: 0.6s;
+}
 
 
 /* Background Image Carousel Animation */
 @keyframes bgCarousel {
-    0%, 100% { background-image: url('https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_1280.jpg'); }
-    10% { background-image: url('https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839183_1280.jpg'); }
-    20% { background-image: url('https://cdn.pixabay.com/photo/2024/05/11/07/22/sofa-8754140_1280.jpg'); }
-    30% { background-image: url('https://cdn.pixabay.com/photo/2020/01/23/02/33/kitchen-4786780_1280.jpg'); }
-    40% { background-image: url('https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939_1280.jpg'); }
-    50% { background-image: url('https://cdn.pixabay.com/photo/2021/02/13/21/47/interior-design-6012873_1280.jpg'); }
-    60% { background-image: url('https://cdn.pixabay.com/photo/2020/05/19/11/12/ceiling-5190252_1280.jpg'); }
-    70% { background-image: url('https://cdn.pixabay.com/photo/2023/04/09/12/57/master-bedroom-7911528_1280.jpg'); }
-    80% { background-image: url('https://cdn.pixabay.com/photo/2023/04/09/00/48/master-bedroom-7910422_1280.jpg'); }
-    90% { background-image: url('https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg'); }
+
+    0%,
+    100% {
+        background-image: url('https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_1280.jpg');
+    }
+
+    10% {
+        background-image: url('https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839183_1280.jpg');
+    }
+
+    20% {
+        background-image: url('https://cdn.pixabay.com/photo/2024/05/11/07/22/sofa-8754140_1280.jpg');
+    }
+
+    30% {
+        background-image: url('https://cdn.pixabay.com/photo/2020/01/23/02/33/kitchen-4786780_1280.jpg');
+    }
+
+    40% {
+        background-image: url('https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939_1280.jpg');
+    }
+
+    50% {
+        background-image: url('https://cdn.pixabay.com/photo/2021/02/13/21/47/interior-design-6012873_1280.jpg');
+    }
+
+    60% {
+        background-image: url('https://cdn.pixabay.com/photo/2020/05/19/11/12/ceiling-5190252_1280.jpg');
+    }
+
+    70% {
+        background-image: url('https://cdn.pixabay.com/photo/2023/04/09/12/57/master-bedroom-7911528_1280.jpg');
+    }
+
+    80% {
+        background-image: url('https://cdn.pixabay.com/photo/2023/04/09/00/48/master-bedroom-7910422_1280.jpg');
+    }
+
+    90% {
+        background-image: url('https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg');
+    }
+
     /* Removed the 100% repeat of the first image, relies on 0% */
 }
 
@@ -289,17 +371,21 @@ section {
 
 .service-card {
     background-color: var(--primary-bg);
-    border-radius: 10px; /* Slightly more rounded */
+    border-radius: 10px;
+    /* Slightly more rounded */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align items top */
+    justify-content: flex-start;
+    /* Align items top */
     text-align: center;
-    overflow: hidden; /* Contain description */
-    border: 1px solid transparent; /* Prepare for hover border */
+    overflow: hidden;
+    /* Contain description */
+    border: 1px solid transparent;
+    /* Prepare for hover border */
 }
 
 .service-card:hover {
@@ -309,9 +395,11 @@ section {
 }
 
 .service-icon {
-    width: 55px; /* Slightly smaller */
+    width: 55px;
+    /* Slightly smaller */
     height: 55px;
-    object-fit: contain; /* Ensure icons scale nicely */
+    object-fit: contain;
+    /* Ensure icons scale nicely */
     /* Removed fill, assuming PNGs/JPGs */
 }
 
@@ -321,15 +409,19 @@ section {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.4s ease, max-height 0.5s ease, margin-top 0.4s ease; /* Smoother transition */
+    transition: opacity 0.4s ease, max-height 0.5s ease, margin-top 0.4s ease;
+    /* Smoother transition */
     margin-top: 0;
 }
 
 .service-card:hover .service-description,
-.service-turnkey:hover .service-description { /* Keep turnkey always potentially visible on hover */
+.service-turnkey:hover .service-description {
+    /* Keep turnkey always potentially visible on hover */
     opacity: 1;
-    max-height: 100px; /* Adjust if more text needed */
-    margin-top: 15px; /* Add space when revealed */
+    max-height: 100px;
+    /* Adjust if more text needed */
+    margin-top: 15px;
+    /* Add space when revealed */
 }
 
 
@@ -351,12 +443,14 @@ section {
 
 /* Why Choose Us Section */
 #why-us {
-    background-color: var(--secondary-bg); /* White background */
+    background-color: var(--secondary-bg);
+    /* White background */
 }
 
 .why-us-card {
     border: none;
-    background-color: var(--primary-bg); /* Use primary light bg */
+    background-color: var(--primary-bg);
+    /* Use primary light bg */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     padding: 25px 20px;
@@ -364,7 +458,7 @@ section {
 }
 
 .why-us-card:hover {
-     transform: translateY(-6px);
+    transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -372,18 +466,22 @@ section {
     color: var(--accent-color);
     line-height: 1;
     margin-bottom: 0;
-    font-weight: 700; /* Make number bold */
-    font-size: 3.5rem; /* Slightly larger number */
+    font-weight: 700;
+    /* Make number bold */
+    font-size: 3.5rem;
+    /* Slightly larger number */
 }
 
 .stat-unit {
     color: var(--accent-color);
-    font-size: 1.8rem; /* Larger unit */
+    font-size: 1.8rem;
+    /* Larger unit */
     font-weight: 700;
     display: inline-block;
     margin-left: 4px;
     line-height: 1;
-    vertical-align: baseline; /* Align better with number */
+    vertical-align: baseline;
+    /* Align better with number */
 }
 
 .why-us-card .card-title {
@@ -400,10 +498,12 @@ section {
 #about-us {
     background-color: var(--light-grey);
 }
+
 #about-us h3 {
     color: var(--accent-color);
     font-weight: 700;
 }
+
 #about-us p {
     line-height: 1.7;
     color: var(--dark-grey);
@@ -418,21 +518,25 @@ section {
     padding: 15px 0;
     transition: transform var(--transition-speed) ease;
 }
+
 .contact-info-item:hover {
     transform: translateY(-3px);
 }
 
 .contact-icon {
-    font-size: 2.2rem; /* Slightly smaller */
+    font-size: 2.2rem;
+    /* Slightly smaller */
     color: var(--accent-color);
-    margin-bottom: 8px; /* Space below icon */
+    margin-bottom: 8px;
+    /* Space below icon */
 }
 
 .contact-link {
     color: var(--dark-text);
     text-decoration: none;
     transition: color var(--transition-speed) ease;
-    font-weight: 500; /* Slightly bolder link text */
+    font-weight: 500;
+    /* Slightly bolder link text */
 }
 
 .contact-link:hover,
@@ -445,9 +549,10 @@ section {
     font-size: 1rem;
     color: var(--dark-text);
 }
+
 .contact-info-item .text-muted {
-     font-size: 0.85rem;
-     color: var(--dark-grey) !important;
+    font-size: 0.85rem;
+    color: var(--dark-grey) !important;
 }
 
 .form-heading {
@@ -460,9 +565,11 @@ section {
 #contact-form .form-control,
 #contact-form .form-select {
     border: 1px solid #ced4da;
-    border-radius: 5px; /* Consistent border radius */
+    border-radius: 5px;
+    /* Consistent border radius */
     transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    padding: 10px 15px; /* Comfortable padding */
+    padding: 10px 15px;
+    /* Comfortable padding */
 }
 
 #contact-form .form-control:focus,
@@ -481,22 +588,28 @@ section {
 .form-control.is-invalid,
 .was-validated .form-select:invalid,
 .form-select.is-invalid {
-    border-color: var(--bs-danger); /* Use Bootstrap variable */
-    background-image: none; /* Optionally hide default BS icon */
+    border-color: var(--bs-danger);
+    /* Use Bootstrap variable */
+    background-image: none;
+    /* Optionally hide default BS icon */
 }
 
 .was-validated .form-control:valid,
 .form-control.is-valid,
 .was-validated .form-select:valid,
 .form-select.is-valid {
-    border-color: var(--bs-success); /* Use Bootstrap variable */
-     background-image: none; /* Optionally hide default BS icon */
+    border-color: var(--bs-success);
+    /* Use Bootstrap variable */
+    background-image: none;
+    /* Optionally hide default BS icon */
 }
+
 .invalid-feedback {
     font-size: 0.85rem;
 }
 
-#form-message { /* Style for JS success/error messages */
+#form-message {
+    /* Style for JS success/error messages */
     font-weight: 500;
 }
 
@@ -511,7 +624,8 @@ section {
     font-size: 1.5rem;
     margin: 0 10px;
     transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
-    display: inline-block; /* For transform */
+    display: inline-block;
+    /* For transform */
 }
 
 .social-links a:hover,
@@ -527,16 +641,49 @@ section {
 }
 
 .developer-credit a {
-    color: #00ffe0; /* Keep original color */
+    color: #00ffe0;
+    /* Keep original color */
     font-weight: 500;
     text-decoration: none;
     position: relative;
     transition: color var(--transition-speed) ease;
 }
+
 .developer-credit a:hover,
 .developer-credit a:focus {
     color: #fff;
     text-decoration: underline;
+}
+
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: none;
+    /* Hidden by default, JS will show it */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 1000;
+    padding: 0;
+    /* Reset padding for icon centering */
+    box-shadow: var(--shadow-md);
+}
+
+#back-to-top:hover {
+    background-color: #c25a1c;
+    /* Darker accent */
+    box-shadow: var(--shadow-lg);
+}
+
+#back-to-top i {
+    line-height: 1;
+    /* Ensure icon is centered */
 }
 
 
@@ -545,27 +692,45 @@ section {
     .navbar-nav {
         margin-top: 10px;
     }
+
     .nav-link {
         margin: 5px 0;
-        padding: 10px 15px; /* Better tap targets */
+        padding: 10px 15px;
+        /* Better tap targets */
         text-align: center;
     }
+
     .nav-link::after {
         left: 50%;
         transform: translateX(-50%);
-         bottom: 5px; /* Adjust underline position */
+        bottom: 5px;
+        /* Adjust underline position */
     }
-     .navbar-collapse {
-        background-color: var(--secondary-bg); /* White background for dropdown */
+
+    .navbar-collapse {
+        background-color: var(--secondary-bg);
+        /* White background for dropdown */
         padding: 10px;
         border-radius: 5px;
         margin-top: 5px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px;
     }
 }
 
 @media (max-width: 767px) {
-    body { padding-top: var(--navbar-height); } /* Ensure padding matches */
+    body {
+        padding-top: var(--navbar-height);
+    }
+
+    /* Ensure padding matches */
 
     .hero-tagline {
         font-size: 2.2rem;
@@ -579,32 +744,58 @@ section {
     .why-us-card .card-body {
         padding: 20px 15px;
     }
-    .stat-number { font-size: 3rem; }
-    .stat-unit { font-size: 1.5rem; }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .stat-unit {
+        font-size: 1.5rem;
+    }
 
     .contact-info-row .col-md-6 {
-        margin-bottom: 15px; /* Space between items vertically */
+        margin-bottom: 15px;
+        /* Space between items vertically */
     }
-    .contact-icon { font-size: 2rem; }
+
+    .contact-icon {
+        font-size: 2rem;
+    }
 
     /* Removed mobile specific background blur/color for nav items - keep it simpler */
     .navbar-nav {
-         background-color: transparent; /* Remove grey background */
-         padding: 0;
-         border-radius: 0;
+        background-color: transparent;
+        /* Remove grey background */
+        padding: 0;
+        border-radius: 0;
     }
+
     .navbar-nav .nav-link {
         /* padding: 10px 15px; */
-        /* border-bottom: 1px solid #eee; */ /* Remove bottom border */
+        /* border-bottom: 1px solid #eee; */
+        /* Remove bottom border */
     }
+
     .navbar-nav .nav-link:last-child {
         border-bottom: none;
     }
 
-    #hero { min-height: 80vh; } /* Slightly less height on mobile */
+    #hero {
+        min-height: 80vh;
+    }
+
+    /* Slightly less height on mobile */
 
     .btn-lg {
         padding: 10px 30px;
         font-size: 1rem;
+    }
+
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px;
     }
 }
