@@ -79,27 +79,31 @@
                             <i class="fas fa-gear me-1"></i> Services
                         </a>
                     </li>
-                    <!-- Portfolio Link - Removed for now, uncomment if section is added back
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">
                             <i class="fas fa-briefcase me-1"></i> Portfolio
                         </a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#why-us">
                             <i class="fas fa-star me-1"></i> Why Us
-
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about-us">
-                            <i class="fas fa-id-card me-1"></i> About
+                            <i class="fas fa-id-card me-1"></i> About Us
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">
-                            <i class="fas fa-message me-1"></i> Contact
+                            <i class="fas fa-message me-1"></i> Contact Us
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-primary btn-sm ms-lg-2 mt-2 mt-lg-0"
+                            id="openTutorialModal">
+                            <i class="fas fa-question-circle me-1"></i> Guide
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -206,14 +210,91 @@
             </div>
         </section>
 
-        <!-- Portfolio Section - Removed for now. Add HTML structure back here if needed -->
-        <!-- Lightbox Structure (Keep if Portfolio might be added back) -->
-        <!--
-        <div class="lightbox" id="lightbox">
-            <a href="#" class="lightbox-close" aria-label="Close lightbox">×</a>
-            <img src="" alt="Enlarged Portfolio Image" class="lightbox-content">
-        </div>
-        -->
+        <section id="portfolio" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-2 section-title" data-aos="fade-up">Our Portfolio Showcase</h2>
+                <p class="text-center lead mb-2" data-aos="fade-up" data-aos-delay="100">
+                    Witness the transformation we bring to spaces through our automatic showcase.
+                </p>
+                <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="d-block w-100 portfolio-carousel-image" alt="Modern Living Room">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Modern Living Room</h5>
+                                <p>Custom sofa set and entertainment unit designed for contemporary living.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/7148841/pexels-photo-7148841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="d-block w-100 portfolio-carousel-image" alt="Elegant Modular Kitchen">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Elegant Modular Kitchen</h5>
+                                <p>High-gloss finish cabinets with smart storage solutions for a sleek kitchen.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                class="d-block w-100 portfolio-carousel-image" alt="Artistic POP Ceiling">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Artistic POP Ceiling</h5>
+                                <p>Intricate POP and Gypsum ceiling design with integrated ambient lighting.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839183_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                class="d-block w-100 portfolio-carousel-image" alt="Cozy Bedroom Interior">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Cozy Bedroom Interior</h5>
+                                <p>Custom bed, wardrobe, and study unit creating a perfect personal space.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                class="d-block w-100 portfolio-carousel-image" alt="Professional Office Space">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Professional Office Space</h5>
+                                <p>Ergonomic and stylish office furniture for a productive environment.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2018/01/03/16/25/furniture-3058659_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                class="d-block w-100 portfolio-carousel-image" alt="Custom Wardrobe Design">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Custom Wardrobe Design</h5>
+                                <p>Space-efficient and elegant wardrobe designs tailored to your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
         <section id="why-us" class="py-5">
             <div class="container">
@@ -260,7 +341,6 @@
                     </div>
                 </div>
                 <div class="text-center mt-5" data-aos="fade-up">
-                    <!-- NOTE: Ensure the PDF file exists at this path -->
                     <a href="pdfs/rina-furniture-catalog.pdf" class="btn btn-outline-primary mt-3" download>
                         <i class="bi bi-download me-2"></i> Download Catalog (PDF)
                     </a>
@@ -268,15 +348,14 @@
             </div>
         </section>
 
-        <!-- About Us Section - ADD CONTENT HERE -->
         <section id="about-us" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5 section-title" data-aos="fade-up">About RINA FURNITURE</h2>
+                <h2 class="text-center mb-5 section-title" data-aos="fade-up">About Us</h2>
                 <div class="row align-items-center">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <img src="https://via.placeholder.com/500x350/F5EFE6/3A3845?text=Rina+Furniture+Workshop"
-                            alt="About Rina Furniture" class="img-fluid rounded shadow-sm mb-4 mb-lg-0" loading="lazy">
-                        <!-- Replace with an actual relevant image -->
+                        <img src="https://bing.com/th/id/BCO.e20e96ae-3ea9-44b0-92ee-4b948f7a25c2.png"
+                            alt="Rina Furniture Workshop or Team" class="img-fluid rounded shadow-sm mb-4 mb-lg-0"
+                            loading="lazy">
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
                         <h3 class="mb-3">20+ Years of Crafting Excellence</h3>
@@ -288,7 +367,6 @@
                             ceiling designs, precision painting, and complete turnkey solutions.</p>
                         <p>At RINA FURNITURE, quality craftsmanship, attention to detail, and client satisfaction are
                             the cornerstones of our business. Let us help you design your dream space.</p>
-                        <!-- Add more relevant details: team, philosophy, specific expertise etc. -->
                     </div>
                 </div>
             </div>
@@ -298,7 +376,6 @@
             <div class="container">
                 <h2 class="text-center mb-5 section-title" data-aos="fade-up">Get In Touch</h2>
 
-                <!-- Contact Information Row -->
                 <div class="row text-center contact-info-row mb-5 g-4 justify-content-center">
                     <div class="col-md-6 col-lg-3" data-aos="fade-up">
                         <div class="contact-info-item d-flex flex-column align-items-center">
@@ -334,7 +411,6 @@
                 <h3 class="text-center mb-4 form-heading" data-aos="fade-up">Send an Inquiry</h3>
                 <div class="row justify-content-center">
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                        <!-- NOTE: This form uses mailto:, which is unreliable. See script.js notes -->
                         <form id="contact-form" class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -397,8 +473,8 @@
     <footer class="site-footer text-white text-center py-4">
         <div class="container">
             <div class="social-links mb-3">
-                <a href="#" aria-label="Visit our Instagram" class="social-icon" target="_blank"
-                    rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <!-- <a href="https://www.instagram.com/rina__furniture/" aria-label="Visit our Instagram" class="social-icon" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-instagram"></i></a> -->
                 <a href="https://wa.me/918780151774" aria-label="Chat on WhatsApp" class="social-icon" target="_blank"
                     rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:rina-furniture@outlook.com" aria-label="Send us an Email" class="social-icon"><i
@@ -414,12 +490,49 @@
     <a href="#" id="back-to-top" class="btn btn-primary" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
+
+    <!-- Tutorial Modal -->
+    <div class="modal fade" id="tutorialModal" tabindex="-1" aria-labelledby="tutorialModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tutorialModalLabel"><i class="fas fa-info-circle me-2"></i>Welcome to
+                        Rina Furniture!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Here's a quick guide to navigate our site:</p>
+                    <ul>
+                        <li>Scroll down to explore our diverse range of <a href="#services"
+                                class="modal-link">Services</a>.</li>
+                        <li>Check out our craftsmanship in the <a href="#portfolio" class="modal-link">Portfolio</a>
+                            section.</li>
+                        <li>Use the <strong>Navigation Menu</strong> at the top to jump to any section quickly.</li>
+                        <li>Learn <a href="#why-us" class="modal-link">Why Rina Furniture</a> is the right choice for
+                            you.</li>
+                        <li>Have a project in mind or any questions? <a href="#contact" class="modal-link">Contact
+                                Us</a> using the form!</li>
+                    </ul>
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" value="" id="dontShowAgain">
+                        <label class="form-check-label" for="dontShowAgain">
+                            Don't show this again
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="closeTutorial">Got
+                        it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Use defer to load script after HTML parsing -->
     <script src="script.js" defer></script>
 </body>
 
