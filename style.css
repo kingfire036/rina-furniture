@@ -6,17 +6,16 @@
     --accent-color: #D76F30;
     --light-grey: #f8f9fa;
     --dark-grey: #6c757d;
-    /* Added for subtle text */
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
     --font-brand: 'Playfair Display', serif;
     --navbar-height: 60px;
-    /* Adjust if needed */
     --transition-speed: 0.3s;
     --bs-primary-rgb: 215, 111, 48;
-    /* For Bootstrap component overrides */
     --bs-link-hover-color-rgb: var(--bs-primary-rgb);
-    /* Make links hover accent */
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 /* Global Styles */
@@ -27,7 +26,6 @@ body {
     padding-top: var(--navbar-height);
     scroll-behavior: smooth;
     overflow-x: hidden;
-    /* Prevent horizontal scroll caused by AOS */
 }
 
 h1,
@@ -51,7 +49,6 @@ h6 {
 /* Section Styling */
 section {
     overflow: hidden;
-    /* Contain AOS animations */
 }
 
 .section-title {
@@ -79,9 +76,8 @@ section {
     font-weight: 500;
     padding: 10px 25px;
     border-radius: 50px;
-    /* Rounded buttons */
     transition: all var(--transition-speed) ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary {
@@ -96,7 +92,7 @@ section {
     border-color: #c25a1c;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-outline-primary {
@@ -109,8 +105,14 @@ section {
     background-color: var(--accent-color);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
 }
+
+.btn-outline-primary.btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+}
+
 
 .btn-lg {
     padding: 12px 35px;
@@ -119,7 +121,7 @@ section {
 
 /* Navigation Bar */
 .navbar {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
     background-color: var(--secondary-bg) !important;
     height: var(--navbar-height);
     transition: background-color var(--transition-speed) ease;
@@ -128,19 +130,15 @@ section {
 .navbar-brand {
     color: var(--accent-color) !important;
     font-family: var(--font-brand);
-    /* Use Playfair Display */
     font-size: 1.6rem;
-    /* Slightly larger */
     font-weight: 600;
 }
 
 .navbar-brand.super-brand {
-    /* Keep existing gradient effect if desired */
     font-family: var(--font-brand);
     font-size: 1.5rem;
     font-weight: 600;
     background: linear-gradient(120deg, #D76F30, #c25a1c, #eda474);
-    /* Adjusted Gradient */
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -149,10 +147,8 @@ section {
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: 1px;
-    /* Reduced spacing */
 }
 
-/* Keep shine effect if liked */
 .navbar-brand.super-brand::before {
     content: '';
     position: absolute;
@@ -163,7 +159,6 @@ section {
     background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5), transparent);
     transform: skewX(-20deg);
     animation: shine 2.5s infinite linear;
-    /* Adjusted timing */
 }
 
 @keyframes shine {
@@ -183,13 +178,10 @@ section {
 .nav-link {
     color: var(--dark-text) !important;
     margin: 0 8px;
-    /* Increased spacing slightly */
     transition: color var(--transition-speed) ease;
     position: relative;
     padding-bottom: 8px;
-    /* Space for underline */
     font-weight: 500;
-    /* Slightly bolder */
 }
 
 .nav-link::after {
@@ -199,7 +191,6 @@ section {
     height: 2px;
     bottom: 0;
     left: 50%;
-    /* Start underline from center */
     transform: translateX(-50%);
     background-color: var(--accent-color);
     transition: width var(--transition-speed) ease;
@@ -213,7 +204,6 @@ section {
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 70%;
-    /* Underline width on hover/active */
 }
 
 .navbar-toggler {
@@ -223,19 +213,16 @@ section {
 .navbar-toggler:focus {
     box-shadow: none;
     outline: 2px solid var(--accent-color);
-    /* Accessibility */
 }
 
 /* Hero Section */
 #hero {
     min-height: calc(100vh - var(--navbar-height));
     color: var(--primary-bg);
-    /* Light text on dark bg */
     position: relative;
     overflow: hidden;
     z-index: 1;
     display: flex;
-    /* Ensure flex alignment works */
     align-items: center;
     justify-content: center;
 }
@@ -250,13 +237,9 @@ section {
     background-size: cover;
     background-position: center;
     animation: bgCarousel 40s infinite linear;
-    /* Smoother linear animation */
-    filter: none;
-    /* Or add blur/brightness: filter: brightness(0.7); */
     opacity: 1;
     z-index: -2;
     will-change: background-image;
-    /* Perf hint */
 }
 
 #hero::after {
@@ -267,7 +250,6 @@ section {
     width: 100%;
     height: 100%;
     background: rgba(1, 1, 1, 0.6);
-    /* Darker overlay for better contrast */
     z-index: -1;
 }
 
@@ -289,7 +271,6 @@ section {
     transform: translateY(25px);
     animation: fadeInUp 0.6s ease forwards;
     padding: 0 3px;
-    /* Small space between words */
 }
 
 @keyframes fadeInUp {
@@ -299,7 +280,6 @@ section {
     }
 }
 
-/* Stagger animation */
 .hero-tagline span:nth-child(1) {
     animation-delay: 0s;
 }
@@ -316,8 +296,6 @@ section {
     animation-delay: 0.6s;
 }
 
-
-/* Background Image Carousel Animation */
 @keyframes bgCarousel {
 
     0%,
@@ -360,8 +338,6 @@ section {
     90% {
         background-image: url('https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg');
     }
-
-    /* Removed the 100% repeat of the first image, relies on 0% */
 }
 
 /* Services Section */
@@ -372,35 +348,28 @@ section {
 .service-card {
     background-color: var(--primary-bg);
     border-radius: 10px;
-    /* Slightly more rounded */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* Align items top */
     text-align: center;
     overflow: hidden;
-    /* Contain description */
     border: 1px solid transparent;
-    /* Prepare for hover border */
 }
 
 .service-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
     border-color: rgba(var(--bs-primary-rgb), 0.3);
 }
 
 .service-icon {
     width: 55px;
-    /* Slightly smaller */
     height: 55px;
     object-fit: contain;
-    /* Ensure icons scale nicely */
-    /* Removed fill, assuming PNGs/JPGs */
 }
 
 .service-description {
@@ -410,56 +379,97 @@ section {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.4s ease, max-height 0.5s ease, margin-top 0.4s ease;
-    /* Smoother transition */
     margin-top: 0;
 }
 
 .service-card:hover .service-description,
 .service-turnkey:hover .service-description {
-    /* Keep turnkey always potentially visible on hover */
     opacity: 1;
     max-height: 100px;
-    /* Adjust if more text needed */
     margin-top: 15px;
-    /* Add space when revealed */
 }
 
+/* Portfolio Section - Carousel */
+#portfolio {
+    background-color: var(--light-grey);
+}
 
-/* Portfolio & Lightbox (Styles kept if portfolio is added back) */
-/* #portfolio { background-color: var(--light-grey); } */
-/* .portfolio-item { position: relative; overflow: hidden; border-radius: 5px; } */
-/* .portfolio-item img { transition: transform 0.4s ease; display: block; width: 100%; height: auto; } */
-/* .portfolio-item a { display: block; position: relative; } */
-/* .portfolio-item a::after { content: '+'; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(var(--bs-primary-rgb), 0.7); color: white; display: flex; align-items: center; justify-content: center; font-size: 3rem; opacity: 0; transition: opacity 0.4s ease; } */
-/* .portfolio-item:hover img { transform: scale(1.05); } */
-/* .portfolio-item:hover a::after { opacity: 1; } */
+#portfolioCarousel .carousel-item {
+    transition: transform .5s ease-in-out;
+}
 
-/* .lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); padding: 20px; box-sizing: border-box; overflow: auto; } */
-/* .lightbox:target { display: flex; align-items: center; justify-content: center; animation: fadeIn 0.3s ease; } */
-/* @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } */
-/* .lightbox-content { max-width: 90%; max-height: 90vh; display: block; margin: auto; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7); } */
-/* .lightbox-close { position: absolute; top: 15px; right: 25px; font-size: 3rem; font-weight: bold; color: #fff; text-decoration: none; opacity: 0.8; transition: opacity var(--transition-speed) ease; line-height: 1; } */
-/* .lightbox-close:hover { opacity: 1; color: var(--accent-color); } */
+.portfolio-carousel-image {
+    height: 500px;
+    /* Adjust as needed for desired aspect ratio */
+    object-fit: cover;
+    /* Cover ensures the image fills the space, cropping if necessary */
+    width: 100%;
+    border-radius: 10px;
+    /* Optional: rounded corners for images */
+}
+
+#portfolioCarousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background for readability */
+    border-radius: 0 0 8px 8px;
+    /* Match image radius if any */
+    padding: 5px;
+    bottom: 0;
+    /* Align to bottom */
+    left: 0;
+    right: 0;
+}
+
+#portfolioCarousel .carousel-caption h5 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#portfolioCarousel .carousel-caption p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+#portfolioCarousel .carousel-indicators button {
+    background-color: white;
+    /* Make indicators more prominent */
+    opacity: 0.7;
+}
+
+#portfolioCarousel .carousel-indicators button.active {
+    opacity: 1;
+}
+
+#portfolioCarousel .carousel-control-prev-icon,
+#portfolioCarousel .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Make controls more visible */
+    border-radius: 50%;
+    padding: 15px;
+    /* Increase clickable area */
+    background-size: 60%;
+}
+
 
 /* Why Choose Us Section */
 #why-us {
     background-color: var(--secondary-bg);
-    /* White background */
 }
 
 .why-us-card {
     border: none;
     background-color: var(--primary-bg);
-    /* Use primary light bg */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     padding: 25px 20px;
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .why-us-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
 }
 
 .stat-number {
@@ -467,21 +477,17 @@ section {
     line-height: 1;
     margin-bottom: 0;
     font-weight: 700;
-    /* Make number bold */
     font-size: 3.5rem;
-    /* Slightly larger number */
 }
 
 .stat-unit {
     color: var(--accent-color);
     font-size: 1.8rem;
-    /* Larger unit */
     font-weight: 700;
     display: inline-block;
     margin-left: 4px;
     line-height: 1;
     vertical-align: baseline;
-    /* Align better with number */
 }
 
 .why-us-card .card-title {
@@ -497,6 +503,10 @@ section {
 /* About Us Section */
 #about-us {
     background-color: var(--light-grey);
+}
+
+#about-us img.rounded {
+    border-radius: .5rem !important;
 }
 
 #about-us h3 {
@@ -525,10 +535,8 @@ section {
 
 .contact-icon {
     font-size: 2.2rem;
-    /* Slightly smaller */
     color: var(--accent-color);
     margin-bottom: 8px;
-    /* Space below icon */
 }
 
 .contact-link {
@@ -536,7 +544,6 @@ section {
     text-decoration: none;
     transition: color var(--transition-speed) ease;
     font-weight: 500;
-    /* Slightly bolder link text */
 }
 
 .contact-link:hover,
@@ -561,15 +568,12 @@ section {
     margin-top: 30px;
 }
 
-/* Form Styling */
 #contact-form .form-control,
 #contact-form .form-select {
     border: 1px solid #ced4da;
     border-radius: 5px;
-    /* Consistent border radius */
     transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     padding: 10px 15px;
-    /* Comfortable padding */
 }
 
 #contact-form .form-control:focus,
@@ -583,15 +587,12 @@ section {
     margin-bottom: 0.3rem;
 }
 
-/* Validation Styles (Bootstrap defaults are usually sufficient) */
 .was-validated .form-control:invalid,
 .form-control.is-invalid,
 .was-validated .form-select:invalid,
 .form-select.is-invalid {
     border-color: var(--bs-danger);
-    /* Use Bootstrap variable */
     background-image: none;
-    /* Optionally hide default BS icon */
 }
 
 .was-validated .form-control:valid,
@@ -599,19 +600,17 @@ section {
 .was-validated .form-select:valid,
 .form-select.is-valid {
     border-color: var(--bs-success);
-    /* Use Bootstrap variable */
     background-image: none;
-    /* Optionally hide default BS icon */
 }
 
 .invalid-feedback {
     font-size: 0.85rem;
 }
 
-#form-message {
-    /* Style for JS success/error messages */
-    font-weight: 500;
+#form-message .alert {
+    text-align: left;
 }
+
 
 /* Footer */
 .site-footer {
@@ -625,7 +624,6 @@ section {
     margin: 0 10px;
     transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
     display: inline-block;
-    /* For transform */
 }
 
 .social-links a:hover,
@@ -642,7 +640,6 @@ section {
 
 .developer-credit a {
     color: #00ffe0;
-    /* Keep original color */
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -655,8 +652,6 @@ section {
     text-decoration: underline;
 }
 
-
-
 #back-to-top {
     position: fixed;
     bottom: 25px;
@@ -665,25 +660,59 @@ section {
     height: 45px;
     border-radius: 50%;
     display: none;
-    /* Hidden by default, JS will show it */
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     z-index: 1000;
     padding: 0;
-    /* Reset padding for icon centering */
     box-shadow: var(--shadow-md);
 }
 
 #back-to-top:hover {
     background-color: #c25a1c;
-    /* Darker accent */
     box-shadow: var(--shadow-lg);
 }
 
 #back-to-top i {
     line-height: 1;
-    /* Ensure icon is centered */
+}
+
+/* Tutorial Modal Styles */
+#tutorialModal .modal-header {
+    background-color: var(--accent-color);
+    color: white;
+    border-bottom: none;
+}
+
+#tutorialModal .modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+#tutorialModal .modal-title {
+    font-weight: 600;
+}
+
+#tutorialModal .modal-body ul {
+    padding-left: 20px;
+}
+
+#tutorialModal .modal-body li {
+    margin-bottom: 8px;
+}
+
+#tutorialModal .modal-link {
+    color: var(--accent-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#tutorialModal .modal-link:hover {
+    text-decoration: underline;
+}
+
+#tutorialModal .form-check-label {
+    font-size: 0.9rem;
+    color: var(--dark-grey);
 }
 
 
@@ -696,7 +725,6 @@ section {
     .nav-link {
         margin: 5px 0;
         padding: 10px 15px;
-        /* Better tap targets */
         text-align: center;
     }
 
@@ -704,16 +732,20 @@ section {
         left: 50%;
         transform: translateX(-50%);
         bottom: 5px;
-        /* Adjust underline position */
+    }
+
+    .navbar-nav .btn#openTutorialModal {
+        display: block;
+        width: fit-content;
+        margin: 10px auto 5px;
     }
 
     .navbar-collapse {
         background-color: var(--secondary-bg);
-        /* White background for dropdown */
         padding: 10px;
         border-radius: 5px;
         margin-top: 5px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-lg);
     }
 
     #back-to-top {
@@ -723,14 +755,17 @@ section {
         bottom: 20px;
         right: 20px;
     }
+
+    .portfolio-carousel-image {
+        height: 400px;
+        /* Adjust carousel image height for tablets */
+    }
 }
 
 @media (max-width: 767px) {
     body {
         padding-top: var(--navbar-height);
     }
-
-    /* Ensure padding matches */
 
     .hero-tagline {
         font-size: 2.2rem;
@@ -755,47 +790,34 @@ section {
 
     .contact-info-row .col-md-6 {
         margin-bottom: 15px;
-        /* Space between items vertically */
     }
 
     .contact-icon {
         font-size: 2rem;
     }
 
-    /* Removed mobile specific background blur/color for nav items - keep it simpler */
-    .navbar-nav {
-        background-color: transparent;
-        /* Remove grey background */
-        padding: 0;
-        border-radius: 0;
-    }
-
-    .navbar-nav .nav-link {
-        /* padding: 10px 15px; */
-        /* border-bottom: 1px solid #eee; */
-        /* Remove bottom border */
-    }
-
-    .navbar-nav .nav-link:last-child {
-        border-bottom: none;
-    }
-
     #hero {
         min-height: 80vh;
     }
-
-    /* Slightly less height on mobile */
 
     .btn-lg {
         padding: 10px 30px;
         font-size: 1rem;
     }
 
-    #back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.3rem;
-        bottom: 20px;
-        right: 20px;
+    .portfolio-carousel-image {
+        height: 300px;
+        /* Adjust carousel image height for mobile */
+    }
+
+    #portfolioCarousel .carousel-caption {
+        padding: 10px;
+        font-size: 0.8rem;
+        /* Smaller text for mobile captions */
+    }
+
+    #portfolioCarousel .carousel-caption h5 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
     }
 }
